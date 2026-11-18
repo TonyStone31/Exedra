@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} - {{site}}</title>
+<meta name="description" content="{{description}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="article">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:url" content="{{canonical}}">
+<script src="/words.js?l={{langcode}}&amp;v={{v}}"></script>
+<script src="/static/words.js?v={{v}}"></script>
+<script src="/static/theme.js?v={{v}}"></script>
+<link rel="stylesheet" href="/static/site.css?v={{v}}">
+<link rel="stylesheet" href="/static/editor.css?v={{v}}">
+<link rel="stylesheet" href="/static/wiki.css?v={{v}}">
+<link rel="icon" href="{{icon32}}">
+<link rel="apple-touch-icon" href="{{icon180}}">
+</head>
+<body class="home wiki plainbar {{kind}}">
+<a class="skip-link" href="#wiki-content">{{t:Skip to content}}</a>
+<header class="topbar">
+  <a class="brand" href="/">{{brand}}</a>
+  <nav aria-label="{{t:Site}}">{{nav}}</nav>
+  <label class="theme-choice" hidden>{{t:Theme}} <select data-theme-picker aria-label="{{t:Theme}}"><option value="auto">{{t:Auto}}</option><option value="light">{{t:Light}}</option><option value="dark">{{t:Dark}}</option></select></label>
+  <form method="get" action="/wiki-language" class="wiki-language">
+    <input type="hidden" name="return" value="{{return}}">
+    <label>{{t:Language}} <select name="language" aria-label="{{t:Language}}">{{languages}}</select></label>
+    <button type="submit">{{t:Apply}}</button>
+  </form>
+  <div class="account">{{account}}</div>
+</header>
+<div class="wikibar">
+  <a class="wikihome" href="/wiki/Main_Page"><span class="wikiname">{{t:Wiki}}</span></a>
+  <form method="get" action="/wiki-search" class="wikisearch" role="search"><input type="search" name="q" placeholder="{{t:Search the wiki}}" aria-label="{{t:Search the wiki}}"><button type="submit">{{t:Search}}</button></form>
+  <nav class="wikinav" aria-label="{{t:Wiki}}">
+    <a href="/wiki-new">{{t:New page}}</a>
+    <a href="/wiki-changes">{{t:Recent changes}}</a>
+    <a href="/wiki-pages">{{t:All pages}}</a>
+    <a href="/wiki-files">{{t:Images}}</a>
+    <a href="/wiki-random">{{t:Random page}}</a>
+    <a href="/wiki-contributors">{{t:Contributors}}</a>
+    <a href="/wiki-help">{{t:Help}}</a>
+  </nav>
+</div>
+{{live}}
+<main class="wikipage" id="wiki-content" tabindex="-1">
+{{content}}
+</main>
+<script src="/static/keys.js?v={{v}}"></script>
+<script src="/static/wiki.js?v={{v}}"></script>
+<script src="/static/editor.js?v={{v}}"></script>
+<script src="/static/wiki-edit.js?v={{v}}"></script>
+</body>
+</html>

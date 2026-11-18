@@ -1,0 +1,28 @@
+# Only explicitly listed project files are candidates for publication.
+/*
+**/.*
+**/*.md
+!/.gitignore
+!/README.md
+!/INSTALL.md
+!/exedra.ini.example
+!/exedra.service
+!/ROADMAP.md
+!/LICENSE
+
+# The program itself.
+!/src/
+!/site/
+!/docs/
+!/docs/API.md
+!/site/templates/wiki-help.md
+
+lib/
+backup/
+*.ppu
+*.o
+*.compiled
+*.res
+*.lps
+*.log
+

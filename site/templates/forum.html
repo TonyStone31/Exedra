@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} - {{site}}</title>
+<link rel="canonical" href="{{canonical}}">
+<script src="/words.js?l={{langcode}}&amp;v={{v}}"></script>
+<script src="/static/words.js?v={{v}}"></script>
+<script src="/static/theme.js?v={{v}}"></script>
+<link rel="stylesheet" href="/static/site.css?v={{v}}">
+<link rel="stylesheet" href="/static/editor.css?v={{v}}">
+<link rel="stylesheet" href="/static/forum.css?v={{v}}">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="{{icon32}}">
+<link rel="apple-touch-icon" href="{{icon180}}">
+<meta name="theme-color" content="#0f1720">
+</head>
+<body class="forum {{who}}">
+<header class="topbar">
+  <a class="brand" href="/">{{brand}}</a>
+  <nav>{{nav}}</nav>
+  {{language_form}}
+  <div class="account">{{account}}</div>
+</header>
+<main class="forum-main" id="forum-top">
+  <div class="forum-navigation">
+    <nav class="forum-nav"><a href="/forum">{{t:Board index}}</a><a class="member-only" href="/forum/recent">{{t:Recent posts}}</a><a class="member-only" href="/forum/unread">{{t:Unread posts}}</a></nav>
+    <form action="/forum/search" method="get" class="forum-search" role="search">
+      <label><span class="sr-only">{{t:Search the forum}}</span><input name="q" type="search" value="{{query}}" placeholder="{{t:Search the forum}}" maxlength="100" required></label>
+      <button>{{t:Search}}</button>
+    </form>
+  </div>
+  {{heading}}
+  {{content}}
+  <noscript><p>{{t:JavaScript is needed to post or change the forum.}}</p></noscript>
+  <div id="forum-bottom"></div>
+</main>
+<footer class="foot">{{t:Free software, written in Free Pascal.}}</footer>
+<script src="/static/keys.js?v={{v}}"></script>
+<script src="/static/editor.js?v={{v}}"></script>
+<script src="/static/forum.js?v={{v}}"></script>
+</body>
+</html>
